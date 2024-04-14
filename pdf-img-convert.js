@@ -21,10 +21,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 */
-
+const path = require("path");
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const isURL = require('is-url');
-const pdfjs = require('pdfjs-dist/legacy/build/pdf.js');
+const pdfjs = require(path.resolve(__dirname, './pdfjs-dist-fork/legacy/build/pdf.js'));
 const Canvas = require("canvas");
 const assert = require("assert").strict;
 const fs = require("fs");
